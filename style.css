@@ -355,8 +355,14 @@ a{ color: inherit; }
 /* Board (meet-the-board page) */
 .board-cards{
   display:grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px 28px;
+}
+@media (max-width: 860px){
+  .board-cards{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px){
+  .board-cards{ grid-template-columns: 1fr; }
 }
 .board-card__photo{
   aspect-ratio: 1 / 1;
