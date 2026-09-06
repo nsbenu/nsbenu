@@ -364,10 +364,11 @@ a{ color: inherit; }
 @media (max-width: 560px){
   .board-cards{ grid-template-columns: 1fr; }
 }
+.board-card{ padding: 0 9%; }
 .board-card__photo{
   aspect-ratio: 1 / 1;
-  width: 82%;
-  margin: 0 auto 16px;
+  width: 100%;
+  margin: 0 0 16px;
   overflow: hidden;
   border: 1px solid var(--line);
 }
