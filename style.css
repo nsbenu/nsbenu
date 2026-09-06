@@ -382,14 +382,14 @@ a{ color: inherit; }
 .board-card h3{ font-size: 19px; margin-bottom: 2px; }
 .board-card__year{ color: var(--grey); font-size: 13.5px; margin: 0 0 10px; }
 .board-card__blurb{ font-size: 14.5px; color: var(--ink); }
-.board-card__email{
+.board-card__linkedin{
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--brass);
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
-.board-card__email:hover{ border-color: var(--brass); }
+.board-card__linkedin:hover{ border-color: var(--brass); }
 
 /* Sponsors */
 .sponsors__intro{ max-width: 56ch; color: var(--grey); }
