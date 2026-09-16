@@ -245,6 +245,30 @@ a{ color: inherit; }
   font-size: 17px;
   margin-top: 12px;
 }
+.page-header__grid{
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.page-header__photo img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  display: block;
+}
+@media (max-width: 780px){
+  .page-header__grid{ grid-template-columns: 1fr; }
+}
+.about__photo{ margin-top: 16px; }
+.about__photo img{
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  display: block;
+}
 
 .btn{
   display:inline-block;
