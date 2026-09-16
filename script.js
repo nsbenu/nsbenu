@@ -141,3 +141,5 @@ async function initLayout() {
 
 initLayout();
 loadEvents();
+initLayout();
+loadEvents();
