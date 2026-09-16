@@ -36,31 +36,48 @@
   </section>
 
   <section id="events" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="section-num">Up next</p>
-        <h2>Upcoming events</h2>
-      </div>
-      <ol class="events-list">
-        <li class="event">
-          <div class="event__date"><span class="event__month">[Mon]</span><span class="event__day">[DD]</span></div>
-          <div class="event__body">
-            <h3>[Event name — e.g. Fall Welcome GBM]</h3>
-            <p>[One-line description of the event.]</p>
-            <p class="event__meta">[Time] · [Location]</p>
-          </div>
-        </li>
-        <li class="event">
-          <div class="event__date"><span class="event__month">[Mon]</span><span class="event__day">[DD]</span></div>
-          <div class="event__body">
-            <h3>[Event name — e.g. Fall Regional Conference send-off]</h3>
-            <p>[One-line description of the event.]</p>
-            <p class="event__meta">[Time] · [Location]</p>
-          </div>
-        </li>
-      </ol>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="section-num">Up next</p>
+      <h2>Upcoming events</h2>
     </div>
-  </section>
+
+    <!-- Side-by-side events container -->
+    <ol class="events-grid">
+      <li class="event-card event-card--left">
+        <div class="event__date"><span class="event__month">[Mon]</span><span class="event__day">[DD]</span></div>
+        <div class="event__body">
+          <h3>[Event name — e.g. Fall Welcome GBM]</h3>
+          <p>[One-line description of the event.]</p>
+          <p class="event__meta">[Time] · [Location]</p>
+        </div>
+      </li>
+      
+      <li class="event-card event-card--right">
+        <div class="event__date"><span class="event__month">[Mon]</span><span class="event__day">[DD]</span></div>
+        <div class="event__body">
+          <h3>[Event name — e.g. Fall Regional Conference send-off]</h3>
+          <p>[One-line description of the event.]</p>
+          <p class="event__meta">[Time] · [Location]</p>
+        </div>
+      </li>
+    </ol>
+
+    <!-- Rotating Image Carousel (Height: 560px) -->
+    <div class="events-carousel" aria-label="Events photo gallery">
+      <div class="carousel__track">
+        <img class="carousel__photo" src="images/hero-1.jpg" alt="Event photo 1">
+        <img class="carousel__photo" src="images/hero-2.jpg" alt="Event photo 2">
+        <img class="carousel__photo" src="images/hero-3.jpg" alt="Event photo 3">
+        <img class="carousel__photo" src="images/hero-4.jpg" alt="Event photo 4">
+        <img class="carousel__photo" src="images/hero-1.jpg" alt="Event photo 5">
+        <img class="carousel__photo" src="images/hero-2.jpg" alt="Event photo 6">
+        <img class="carousel__photo" src="images/hero-3.jpg" alt="Event photo 7">
+      </div>
+    </div>
+
+  </div>
+</section>
 
 </main>
 
