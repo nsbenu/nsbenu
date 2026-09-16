@@ -564,3 +564,103 @@ a:focus-visible, button:focus-visible{
   outline: 2px solid var(--purple);
   outline-offset: 2px;
 }
+/* ---------------------------------------------------
+   Side-by-Side Events & Carousel Layout
+--------------------------------------------------- */
+
+/* Grid container for side-by-side events */
+.events-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base event card formatting */
+.event-card {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+}
+
+/* First event: content aligned left, open on left */
+.event-card--left {
+  padding-right: 32px;
+}
+
+/* Second event: line on middle separating events, open on right */
+.event-card--right {
+  padding-left: 32px;
+  border-left: 1px solid var(--line);
+}
+
+/* Mobile responsive fallback for event layout */
+@media (max-width: 720px) {
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+  .event-card--left {
+    padding-right: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .event-card--right {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+/* Rotating Carousel Styling (Height: 560px) */
+.events-carousel {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  margin-top: 48px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--ink);
+}
+
+.carousel__track {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: carousel-fade 28s infinite;
+  will-change: opacity, transform;
+}
+
+/* 7-Image Animation Delays (28s total loop / 4s per image) */
+.carousel__photo:nth-child(1) { animation-delay: 0s; }
+.carousel__photo:nth-child(2) { animation-delay: 4s; }
+.carousel__photo:nth-child(3) { animation-delay: 8s; }
+.carousel__photo:nth-child(4) { animation-delay: 12s; }
+.carousel__photo:nth-child(5) { animation-delay: 16s; }
+.carousel__photo:nth-child(6) { animation-delay: 20s; }
+.carousel__photo:nth-child(7) { animation-delay: 24s; }
+
+@keyframes carousel-fade {
+  0%   { opacity: 0; transform: scale(1); }
+  3%   { opacity: 1; }
+  14%  { opacity: 1; }
+  17%  { opacity: 0; transform: scale(1.03); }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel__photo {
+    animation: none;
+    opacity: 0;
+  }
+  .carousel__photo:first-child {
+    opacity: 1;
+  }
+}
